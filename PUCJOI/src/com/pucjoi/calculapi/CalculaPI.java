@@ -8,7 +8,7 @@ public class CalculaPI {
             double pi = 4 * (1 - funcRecPI(3, Integer.parseInt(args[0]), true));
 
             System.out.printf("O valor de PI é %.5f \n", pi);
-            System.out.printf("Diferença: %.5f", pi - Math.PI);
+            System.out.printf("Diferença: %.2f%%", 1 - pi / Math.PI);
         }
     }
     private static double funcRecPI(int position, int denominator, Boolean symbols) {
