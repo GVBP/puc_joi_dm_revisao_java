@@ -5,6 +5,21 @@ public class Retangulo extends Forma {
     protected double base;
     protected double altura;
 
+    public Retangulo() {};
+
+    public Retangulo(double base, double altura) {
+        this.base = base;
+        this.altura = altura;
+    }
+
+    public Retangulo(double base, double altura,
+                     String cor, boolean preenchido) {
+        this.base = base;
+        this.altura = altura;
+        this.cor = cor;
+        this.preenchido = preenchido;
+    }
+
     public double getBase() {
         return base;
     }
@@ -29,5 +44,15 @@ public class Retangulo extends Forma {
     @Override
     public double getPerimetro() {
         return 2 * (base + altura);
+    }
+
+    @Override
+    public String toString() {
+        return "Retangulo{" +
+                "base=" + base +
+                ", altura=" + altura +
+                ", cor='" + cor + '\'' +
+                ", preenchido=" + preenchido +
+                '}';
     }
 }

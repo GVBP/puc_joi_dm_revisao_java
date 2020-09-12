@@ -5,6 +5,13 @@ public abstract class Forma {
     protected String cor = "Vermelho";
     protected boolean preenchido = true;
 
+    public Forma() {};
+
+    public Forma(String cor, boolean preenchido) {
+        this.cor = cor;
+        this.preenchido = preenchido;
+    }
+
     public String getCor() {
         return cor;
     }
@@ -24,4 +31,12 @@ public abstract class Forma {
     public abstract double getArea();
 
     public abstract double getPerimetro();
+
+    @Override
+    public String toString() {
+        return "Forma{" +
+                "cor='" + cor + '\'' +
+                ", preenchido=" + preenchido +
+                '}';
+    }
 }
